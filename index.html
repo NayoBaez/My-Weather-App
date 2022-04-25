@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container-primary">
+      <form id="search-city-form">
+        <input id="city-input" type="text" placeholder="Introduce a city" />
+        <input id="search-button" type="submit" value="Search" />
+        <input
+          id="current-location-button"
+          type="submit"
+          value="Current location"
+        />
+      </form>
+      <div class="container-secondary">
+        <h3 id="city-name">Santo Domingo,</h3>
+        <h3 id="country-name">DR</h3>
+
+        <h4 id="current-date">
+          Sunday April 3rd
+          <span id="current-time">12.30</span>
+        </h4>
+        <h4 id="sky" class="sky-condition">Thunderstorm</h4>
+        <br />
+
+        <div class="container-center">
+          <div class="row weather-information">
+            <div class="column column-1">
+              <img
+                src="images/weather-icons/thunderstorms.png"
+                alt="thunderstorms"
+                class="weather-icon-center"
+              />
+            </div>
+            <div class="column column-2">
+              <h1 id="current-temp">30</h1>
+              <span class="tempType">
+                <a href="#" id="celsius-temp">°C</a> |
+                <a href="#" id="fahrenheit-temp">°F</a>
+              </span>
+            </div>
+            <div class="column column-3">
+              <span id="feel">Feels Like: 31℃</span>
+              <span id="humidity">Humidity: 90%</span>
+              <span id="wind">Wind: 0km/h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-bottom">
+        <div class="row">
+          <div class="column column-weekday">
+            <p>Mon</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/partly_cloudy.png"
+              alt="Partly Cloudy"
+            />
+            <span class="temperature-primary">28°</span> 21°
+          </div>
+          <div class="column column-weekday">
+            <p>Tue</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/sunny.png"
+              alt="Sunny"
+            />
+            <span class="temperature-primary">30°</span> 21°
+          </div>
+          <div class="column column-weekday">
+            <p>Wed</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/rain.png"
+              alt="Rainy"
+            />
+            <span class="temperature-primary">28°</span> 21°
+          </div>
+          <div class="column column-weekday">
+            <p>Thu</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/partly_cloudy.png"
+              alt="Partly Cloudy"
+            />
+            <span class="temperature-primary">28°</span> 22°
+          </div>
+          <div class="column column-weekday">
+            <p>Fri</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/partly_cloudy.png"
+              alt="Partly Cloudy"
+            />
+            <span class="temperature-primary">29°</span> 21°
+          </div>
+          <div class="column column-weekday">
+            <p>Sat</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/rain_light.png"
+              alt="Light Rain"
+            />
+            <span class="temperature-primary">29°</span> 21°
+          </div>
+          <div class="column column-weekday">
+            <p>Sun</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/thunderstorms.png"
+              alt="thunderstorms"
+            />
+            <span class="temperature-primary">30°</span> 21°
+          </div>
+
+          <div class="column column-weekday">
+            <p>Mon</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/rain_s_cloudy.png"
+              alt="Rain Cloudy"
+            />
+            <span class="temperature-primary">29°</span> 21°
+          </div>
+        </div>
+      </div>
+      <div class="footer">Open Source Code by Naomi</div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

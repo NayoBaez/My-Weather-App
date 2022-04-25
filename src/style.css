@@ -1,0 +1,173 @@
+body {
+  background-image: url(ocean1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+h3 {
+  margin: 0;
+  font-weight: bold;
+  display: inline;
+}
+
+.sky-condition {
+  text-transform: capitalize;
+}
+
+input[type="text"] {
+  margin: 40px 0px 20px 70px;
+  width: 45%;
+  padding: 12px 20px;
+  border: thin double;
+  font-family: "Gill Sans", sans-serif;
+  border-color: rgb(158, 192, 255);
+  border-radius: 3px;
+}
+input[type="submit"] {
+  background: rgb(158, 192, 255);
+  color: white;
+  border: 1px solid rgb(158, 192, 255);
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  margin: 20px 2px;
+  padding: 12px 10px;
+  transition: all 200ms ease-in-out;
+}
+input[type="submit"]:hover {
+  background: white;
+  color: rgb(158, 192, 255);
+  cursor: pointer;
+}
+
+.tempType {
+  position: relative;
+  font-size: 15px;
+  top: -32px;
+  left: 40px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.temperature-primary {
+  font-weight: 400;
+}
+
+.container-primary {
+  display: block;
+  background: #fff;
+  margin: 20px auto;
+  width: 800px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.container-secondary {
+  display: block;
+  margin: 20px auto;
+  width: 650px;
+  border: thin double;
+  border-radius: 3px;
+  padding: 10px 10px 40px 10px;
+  border-color: rgb(158, 192, 255);
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.container-center {
+  display: block;
+  margin: 20px auto;
+  width: 450px;
+  border: thin double;
+  border-radius: 3px;
+  padding: 20px 10px;
+  border-color: rgb(158, 192, 255);
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.weather-information {
+  display: flex;
+  align-items: center;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+  display: inline-block;
+  width: 25%;
+  margin: 10px 10px;
+  padding-left: 10px;
+}
+
+.container-bottom {
+  display: block;
+  margin: 20px auto;
+  width: 650px;
+  border: thin double;
+  border-radius: 3px;
+  padding: 40px 10px;
+  border-color: rgb(158, 192, 255);
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.column-weekday {
+  display: inline-block;
+  margin-left: 4px;
+  width: 51px;
+  border: thin double;
+  border-radius: 3px;
+  padding: 10px 10px;
+
+  border-color: rgb(158, 192, 255);
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.weather-icon {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer {
+  padding: 20px 20px 10px 20px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: lighter;
+  font-family: "Gill Sans", sans-serif;
+  background: rgb(158, 192, 255);
+  letter-spacing: 1px;
+}
+
+.city-search {
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
