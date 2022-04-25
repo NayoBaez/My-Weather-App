@@ -64,12 +64,16 @@ input[type="submit"]:hover {
   color: black;
 }
 
-a {
+.unit-symbol {
   text-decoration: none;
   color: black;
   font-family: "Gill Sans", sans-serif;
 }
 
+.footer-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 .temperature-primary {
   font-weight: 400;
 }
