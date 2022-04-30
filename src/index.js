@@ -78,6 +78,13 @@ function displayWeatherCondition(response) {
   let wind = document.querySelector("#wind");
   let windCondition = Math.round(response.data.wind.speed);
   wind.innerHTML = `Wind: ${windCondition}km/h`;
+
+  let iconElement = document.querySelector("#weather-icon-center");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCityTemperature(cityCountry) {
