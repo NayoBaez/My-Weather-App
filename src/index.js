@@ -52,7 +52,10 @@ newDate.innerHTML = dateToday(fullDate);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
-  let currentCityTemp = document.querySelector("#current-temp");
+
+  celciusTemperature = response.data.main.temp;
+
+  let currentCityTemp = document.querySelector("#current-temperature");
   let tempcity = Math.round(response.data.main.temp);
   currentCityTemp.innerHTML = tempcity;
 
@@ -101,27 +104,31 @@ cityName.addEventListener("submit", showCity);
 
 //Display temperature unit
 
-function fahrenheit(event) {
+function displayFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = 86;
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheitTemp = document.querySelector("#fahrenheit-temp");
-fahrenheitTemp.addEventListener("click", fahrenheit);
-
-function celsius(event) {
+function displayCelsius(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = 30;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
-let celsiusTemp = document.querySelector("#celsius-temp");
-celsiusTemp.addEventListener("click", celsius);
+
+let celciusTemperature = null;
+
+let fahrenheitTempLink = document.querySelector("#fahrenheit-temperature");
+fahrenheitTempLink.addEventListener("click", displayFahrenheit);
+
+let celsiusTempLink = document.querySelector("#celsius-temperature");
+celsiusTempLink.addEventListener("click", displayCelsius);
 
 //Display current location temperature
 
 function showLocationTemperature(response) {
-  let currentLocationTemp = document.querySelector("#current-temp");
+  let currentLocationTemp = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.main.temp);
   currentLocationTemp.innerHTML = temperature;
 
@@ -169,5 +176,5 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Search City Display
+//Search City Display Default
 showCityTemperature("Santo Domingo");
