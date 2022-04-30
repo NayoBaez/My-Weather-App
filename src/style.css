@@ -64,10 +64,15 @@ input[type="submit"]:hover {
   color: black;
 }
 
-.unit-symbol {
+.unit-symbol-active {
   text-decoration: none;
   color: black;
   font-family: "Gill Sans", sans-serif;
+  cursor: default;
+}
+
+.unit-symbol {
+  text-decoration: none;
 }
 
 .footer-link {

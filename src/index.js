@@ -106,13 +106,18 @@ cityName.addEventListener("submit", showCity);
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  celsiusTempLink.classList.remove("unit-symbol-active");
+  fahrenheitTempLink.classList.add("unit-symbol-active");
+  celsiusTempLink.classList.add("unit-symbol");
   let temperatureElement = document.querySelector("#current-temperature");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function displayCelsius(event) {
   event.preventDefault();
+  celsiusTempLink.classList.add("unit-symbol-active");
+  fahrenheitTempLink.classList.remove("unit-symbol-active");
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
