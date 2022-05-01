@@ -48,6 +48,34 @@ let newDate = document.querySelector("#current-date");
 let fullDate = new Date();
 newDate.innerHTML = dateToday(fullDate);
 
+//Display weekly forecast
+
+function displayWeeklyForecast() {
+  let forecastElement = document.querySelector("#weekly-forecast");
+  let forecastHTML = `<span class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+
+          <div class="column column-weekday">
+            <p class = "weekday">${day}</p>
+            <img
+              class="weather-icon"
+              src="images/weather-icons/partly_cloudy.png"
+              alt="Partly Cloudy"
+            />
+            <span class="temperature-primary">28°</span> 21°
+          </div>
+        </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</span>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Display show city weather
 
 function displayWeatherCondition(response) {
@@ -190,3 +218,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 //Search City Display Default
 showCityTemperature("Santo Domingo");
+displayWeeklyForecast();

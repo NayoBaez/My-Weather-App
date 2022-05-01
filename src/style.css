@@ -151,7 +151,6 @@ input[type="submit"]:hover {
   border: thin double;
   border-radius: 3px;
   padding: 10px 10px;
-
   border-color: rgb(158, 192, 255);
   font-weight: lighter;
   font-family: "Gill Sans", sans-serif;
