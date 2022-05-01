@@ -48,26 +48,38 @@ let newDate = document.querySelector("#current-date");
 let fullDate = new Date();
 newDate.innerHTML = dateToday(fullDate);
 
+//Get forecast days from API timestamp
+
+function formatForcastDate(timestamp) {
+  let forcastDate = new Date(timestamp * 1000);
+  let day = forcastDate.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 //Display weekly forecast
 
 function displayWeeklyForecast(response) {
-  console.log(response.data.daily);
+  let dailyForecast = response.data.daily;
   let forecastElement = document.querySelector("#weekly-forecast");
   let forecastHTML = `<span class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
+  dailyForecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
 
           <div class="column column-weekday">
-            <p class = "weekday">${day}</p>
+            <p class = "weekday">${formatForcastDate(forecastDay.dt)}</p>
             <img
               class="weather-icon"
-              src="images/weather-icons/partly_cloudy.png"
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
               alt="Partly Cloudy"
             />
-            <span class="temperature-primary">28°</span> 21°
+            <span class="temperature-primary">${Math.round(
+              forecastDay.temp.max
+            )}°</span> ${Math.round(forecastDay.temp.min)}°
           </div>
         </div>
         `;
