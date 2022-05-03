@@ -1,7 +1,5 @@
 body {
-  background-image: url(ocean1.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #f1f0ee;
 }
 
 p {
@@ -98,6 +96,7 @@ input[type="submit"]:hover {
   display: block;
   margin: 20px auto;
   width: 650px;
+  height: 400px;
   border: thin double;
   border-radius: 3px;
   padding: 10px 10px 40px 10px;

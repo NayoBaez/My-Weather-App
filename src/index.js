@@ -140,6 +140,7 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  imgQuery();
 }
 
 function showCityTemperature(cityCountry) {
@@ -149,6 +150,28 @@ function showCityTemperature(cityCountry) {
   let apiUrl = `${apiEndpoint}${cityCountry}&APPID=${apiKey}&units=${unit}`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+// Get city photo
+
+function getImgData(response) {
+  console.log(response.data.results);
+
+  let imgUrl = response.data.results[0].urls.regular;
+  let photographer = response.data.results[0].user.name;
+  let profileUrl = response.data.results[0].user.links.html;
+
+  let elementBgImg = document.querySelector("#city-image");
+  let elementCityImg = document.querySelector("#city-unsplash");
+
+  elementBgImg.setAttribute("style", `background-image: url(${imgUrl});`);
+  elementCityImg.innerHTML = "rio de janeiro";
+}
+
+function imgQuery() {
+  let query = "rio de janeiro";
+  let apiUrl = `https://unsplash.farnsworth.ch/api/f149a8/?query=${query}`;
+  axios.get(apiUrl).then(getImgData);
 }
 
 //Search City Display
