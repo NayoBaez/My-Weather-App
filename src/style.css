@@ -25,6 +25,10 @@ h3 {
   text-transform: capitalize;
 }
 
+.city-unsplash {
+  color: rgb(158, 192, 255);
+}
+
 input[type="text"] {
   margin: 40px 0px 20px 70px;
   width: 45%;

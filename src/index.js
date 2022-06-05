@@ -165,7 +165,7 @@ function getImgData(response) {
   let elementCityImg = document.querySelector("#city-unsplash");
 
   elementBgImg.setAttribute("style", `background-image: url(${imgUrl});`);
-  elementCityImg.innerHTML = "rio de janeiro";
+  elementCityImg.innerHTML = "city";
 }
 
 function imgQuery() {
