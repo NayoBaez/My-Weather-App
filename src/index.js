@@ -278,4 +278,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 //Search City Display Default
-showCityTemperature("Santo Domingo");
+showCityTemperature("tokyo");
