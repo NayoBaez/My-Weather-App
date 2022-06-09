@@ -106,8 +106,6 @@ function getForecast(coordinates) {
 function displayWeatherCondition(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
 
-  celciusTemperature = response.data.main.temp;
-
   let currentCityTemp = document.querySelector("#current-temperature");
   let tempcity = Math.round(response.data.main.temp);
   currentCityTemp.innerHTML = tempcity;
@@ -139,6 +137,7 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  city = response.data.name;
   getForecast(response.data.coord);
   imgQuery();
 }
@@ -157,20 +156,22 @@ function showCityTemperature(cityCountry) {
 function getImgData(response) {
   console.log(response.data.results);
 
-  let imgUrl = response.data.results[0].urls.regular;
-  let photographer = response.data.results[0].user.name;
-  let profileUrl = response.data.results[0].user.links.html;
+  let imgUrl = response.data.results[1].urls.regular;
+  let photographer = response.data.results[1].user.name;
+  let profileUrl = response.data.results[1].user.links.html;
 
   let elementBgImg = document.querySelector("#city-image");
   let elementCityImg = document.querySelector("#city-unsplash");
 
   elementBgImg.setAttribute("style", `background-image: url(${imgUrl});`);
-  elementCityImg.innerHTML = "city";
+  elementCityImg.innerHTML = city;
 }
 
 function imgQuery() {
-  let query = "rio de janeiro";
-  let apiUrl = `https://unsplash.farnsworth.ch/api/f149a8/?query=${query}`;
+  let query = city;
+  let apiKey = "ENrrd_zBxxoPJH52uDIjsiyNhAV2Tm3lpqAfBzesSm4";
+  let apiEndpoint = "https://api.unsplash.com";
+  let apiUrl = `${apiEndpoint}/search/photos?query=${query}&client_id=${apiKey}`;
   axios.get(apiUrl).then(getImgData);
 }
 
