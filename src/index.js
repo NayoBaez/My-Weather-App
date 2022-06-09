@@ -137,6 +137,7 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  celciusTemperature = response.data.main.temp;
   city = response.data.name;
   getForecast(response.data.coord);
   imgQuery();
