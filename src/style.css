@@ -1,5 +1,5 @@
 body {
-  background-color: #f1f0ee;
+  background-color: #f9f7fe;
   font-family: "Gill Sans", sans-serif;
 }
 
@@ -79,6 +79,12 @@ input[type="submit"]:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
 .temperature-primary {
   font-weight: 400;
 }
@@ -88,7 +94,7 @@ input[type="submit"]:hover {
   background: #fff;
   margin: 20px auto;
   width: 800px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   border-radius: 3px;
   font-weight: lighter;
 }
@@ -104,6 +110,7 @@ input[type="submit"]:hover {
   border-color: rgb(255, 255, 255);
   font-weight: lighter;
   background-size: cover;
+  background-position: center;
 }
 
 .container-center {
@@ -115,7 +122,7 @@ input[type="submit"]:hover {
   border-color: transparent;
   font-weight: lighter;
   background: rgba(110, 110, 110, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   color: white;
 }
 
