@@ -94,7 +94,7 @@ input[type="submit"]:hover {
   background: #fff;
   margin: 20px auto;
   width: 800px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   font-weight: lighter;
 }
