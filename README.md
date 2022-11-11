@@ -1,3 +1,4 @@
+[![MasterHead](https://raw.githubusercontent.com/NayoBaez/My-Weather-App/main/GITHUB%20README%20BANNER%20-%20WEATHER-JS.png)](https://nayobaez.com)
 
 # Weather Forecast
 
