@@ -10,8 +10,8 @@ I created this Weather App with a Search Engine feature and a forecast for the w
 
 ## Tech Stack
 
-Built with HTML, CSS, Vanilla Javascript, Axios & <br>
-Openweather + Unsplash API Integrations
+Built with HTML, CSS, Vanilla Javascript, Axios <br>
+& Openweather + Unsplash API Integrations
 
 
 ## Author
