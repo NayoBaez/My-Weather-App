@@ -2,18 +2,19 @@
 
 # Weather Forecast
 
-I created this Weather App with a Search Engine feature and a forecast for the week ahead. It’s built with HTML, CSS, Vanilla Javascript, Axios and the Openweather & Unsplash API integrations. This project really pushed my limits as this was my first time integrating API’s with pure Javascript and I was really eager to make the app more complex by adding the image feature, so I had to make sure both api’s are running perfectly in sync with each other.
+I created this Weather App with a Search Engine feature and a forecast for the week ahead. It’s built with HTML, CSS, Vanilla Javascript, Axios and the Openweather & Unsplash API integrations. This project really pushed my limits as this was my first time integrating API’s with pure Javascript and I was really eager to make the app more complex by adding the image feature, so I had to make sure both api’s are running perfectly in sync with each other. 
 
-<img align="right" alt="girlcoding" width="350" src="http://nayobaez.com/images/Javascript-weather.png"></img>
+<img align="right" alt="JavascriptWeatherApp" width="350" src="http://nayobaez.com/images/Javascript-weather.png"></img>
+
 
 
 ## Tech Stack
 
 Built with HTML, CSS, Vanilla Javascript, Axios & <br>
-Openweather + Unsplash API Integrations
+Openweather + Unsplash API Integrations - [Project Link](https://beautiful-buttercream-0cb2d5.netlify.app/)
 
 
-## Authors
+## Author
 
 - [@NayoBaez](https://www.github.com/nayobaez)
 
