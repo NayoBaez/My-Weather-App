@@ -92,12 +92,10 @@ function displayWeeklyForecast(response) {
 //Get city coordinates
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let unit = "metric";
   let apiKey = "b975b52f3f47d45db1282dbfc7eb6580";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/onecall?";
   let apiUrl = `${apiEndpoint}lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${unit}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeeklyForecast);
 }
 
@@ -155,8 +153,6 @@ function showCityTemperature(cityCountry) {
 // Get city photo
 
 function getImgData(response) {
-  console.log(response.data.results);
-
   let imgUrl = response.data.results[1].urls.regular;
   let photographer = response.data.results[1].user.name;
   let profileUrl = response.data.results[1].user.links.html;
